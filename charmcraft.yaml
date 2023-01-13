@@ -3,8 +3,7 @@ parts:
   charm:
     source: src
     plugin: reactive
-      #plugin: charm
-      #charm-entrypoint: charm.py
+    build-snaps: [charm]
 bases:
     - build-on:
         - name: ubuntu
@@ -27,4 +26,3 @@ bases:
           channel: "16.04"
           architectures:
               - amd64
-

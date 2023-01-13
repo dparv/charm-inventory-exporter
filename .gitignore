@@ -39,4 +39,5 @@ dist/
 
 # Builds
 .build/
+build/
 *.charm

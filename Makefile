@@ -52,7 +52,8 @@ submodules-update:
 build: clean submodules-update
 	@echo "Building charm to directory ${CHARM_BUILD_DIR}/${CHARM_NAME}"
 	@-git rev-parse --abbrev-ref HEAD > ./src/repo-info
-	@charmcraft -v pack ${BUILD_ARGS}
+	#@charmcraft -v pack ${BUILD_ARGS}
+	@charmcraft pack --destructive-mode
 	@bash -c ./rename.sh
 	@mkdir -p ${CHARM_BUILD_DIR}/${CHARM_NAME}
 	@unzip ${PROJECTPATH}/${CHARM_NAME}.charm -d ${CHARM_BUILD_DIR}/${CHARM_NAME}
