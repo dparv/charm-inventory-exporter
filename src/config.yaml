@@ -1,0 +1,6 @@
+options:
+  http-port:
+    type: int
+    default: 8675
+    description: |
+      Http port to serve requests on.

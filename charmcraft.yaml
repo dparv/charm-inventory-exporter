@@ -1,0 +1,30 @@
+type: charm
+parts:
+  charm:
+    source: src
+    plugin: reactive
+      #plugin: charm
+      #charm-entrypoint: charm.py
+bases:
+    - build-on:
+        - name: ubuntu
+          channel: "22.04"
+          architectures: ["amd64"]
+      run-on:
+        - name: ubuntu
+          channel: "22.04"
+          architectures:
+              - amd64
+        - name: ubuntu
+          channel: "20.04"
+          architectures:
+              - amd64
+        - name: ubuntu
+          channel: "18.04"
+          architectures:
+              - amd64
+        - name: ubuntu
+          channel: "16.04"
+          architectures:
+              - amd64
+

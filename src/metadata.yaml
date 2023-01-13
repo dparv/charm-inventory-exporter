@@ -1,0 +1,22 @@
+name: inventory-exporter
+maintainer: Diko Parvanov <diko.parvanov@canonical.com>
+summary: Inventory exporter charm using the inventory exporter snap
+description: |
+  This runs a simple python http server that serves apt packages, snaps,
+  hostname and kernel in json format.
+subordinate: true
+series: []
+tags:
+    - misc
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+provides:
+  inventory-exporter:
+    interface: inventory-exporter
+resources:
+  inventory-exporter:
+    type: file
+    filename: inventory-exporter.snap
+    description: Exporter snap
