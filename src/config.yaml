@@ -1,16 +1,4 @@
 options:
-  customer:
-    type: string
-    default: ""
-    description: |
-      REQUIRED. If not set charm will be in blocked state.
-      The customer name appended to the tar files.
-  site:
-    type: string
-    default: ""
-    description: |
-      REQUIRED. If not set charm will be in blocked state.
-      The site name of the customer (if multiple) appended to the tar files.
   port:
     type: int
     default: 8675
