@@ -3,6 +3,7 @@
 # vim:fenc=utf-8
 
 import logging
+import socket
 
 from charms.reactive import set_flag, when, when_not, hook, clear_flag
 from charms.layer import snap
@@ -65,6 +66,7 @@ def configure_inventory_exporter_relation(relation_id=None, unit=None):
     relation_settings = {
         "port": hookenv.config('port'),
         "model": hookenv.model_name(),
+        "hostname": socket.gethostname(),
     }
     for rid in relations:
         hookenv.relation_set(
