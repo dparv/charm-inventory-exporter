@@ -11,8 +11,13 @@ options:
     description: |
       REQUIRED. If not set charm will be in blocked state.
       The site name of the customer (if multiple) appended to the tar files.
-  http-port:
+  port:
     type: int
     default: 8675
     description: |
       Http port to serve requests on.
+  bind_address:
+    type: string
+    default: 0.0.0.0
+    description: |
+      IP address to bind to. Defaults to all.
